@@ -1,0 +1,31 @@
+# BXTpa Configuration
+# All messages support & color codes. Fully customizable!
+
+settings:
+  # Teleport countdown in seconds
+  countdown-seconds: 5
+  # How long a request stays valid (seconds)
+  request-expire-seconds: 60
+  # Cancel teleport if the player moves during countdown
+  cancel-on-move: true
+
+messages:
+  prefix: "&8[&bBXTpa&8] "
+  no-permission: "%prefix%&cBunun icin yetkin yok!"
+  player-not-found: "%prefix%&cOyuncu bulunamadi!"
+  cannot-tpa-self: "%prefix%&cKendine istek gonderemezsin!"
+  request-sent: "%prefix%&aIstek gonderildi: &f%player%"
+  request-received-tpa: "%prefix%&b%player% &fsana teleport olmak istiyor!"
+  request-received-tphere: "%prefix%&b%player% &fseni yanına cagiriyor!"
+  accept-button: "&a&l[KABUL ET]"
+  deny-button: "&c&l[REDDET]"
+  accept-hover: "&aKabul etmek icin tikla"
+  deny-hover: "&cReddetmek icin tikla"
+  request-accepted: "%prefix%&aIstek kabul edildi!"
+  request-denied: "%prefix%&cIstek reddedildi!"
+  no-pending-request: "%prefix%&cBekleyen bir istegin yok!"
+  request-expired: "%prefix%&cIstegin suresi doldu!"
+  countdown: "&e&l%seconds% SANIYE SONRA ISINLANACAKSIN"
+  countdown-warning: "&c&lLUTFEN HAREKET ETME!"
+  teleport-cancelled-move: "%prefix%&cHareket ettigin icin teleport iptal edildi!"
+  teleported: "%prefix%&aTeleport basarili!"
