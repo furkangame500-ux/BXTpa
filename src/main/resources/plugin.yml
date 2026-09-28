@@ -1,23 +1,28 @@
 name: BXTpa
-version: 1.0.0
-main: com.bxtpa.BXTpa
-api-version: '1.20'
-author: BXT
-description: Lightweight and customizable TPA (Teleport Request) plugin.
+version: '${version}'
+main: top.craft_hello.tpa.TPA
+description: Spigot ve Paper sunucuları için tamamen Türkçe TPA eklentisi
+author: Furkan Studio
+folia-supported: true
+
 commands:
   tpa:
-    description: Send a teleport request to a player.
-    usage: /tpa <player>
+    description: Bir oyuncuya ışınlanma isteği gönderir
+    usage: /tpa <oyuncu>
   tphere:
-    description: Request a player to teleport to you.
-    usage: /tphere <player>
+    description: Bir oyuncunun senin yanına ışınlanmasını ister
+    usage: /tphere <oyuncu>
   tpaccept:
-    description: Accept a teleport request.
+    description: Gelen ışınlanma isteğini kabul eder
     usage: /tpaccept
   tpdeny:
-    description: Deny a teleport request.
+    description: Gelen ışınlanma isteğini reddeder
     usage: /tpdeny
+
 permissions:
-  bxtpa.use:
-    description: Allows using BXTpa commands.
+  bxtpa.tpa:
     default: true
+    description: /tpa komutunu kullanabilir
+  bxtpa.tphere:
+    default: true
+    description: /tphere komutunu kullanabilir
