@@ -1,31 +1,94 @@
-# BXTpa Configuration
-# All messages support & color codes. Fully customizable!
+# BXTpa yapılandırması
+version: ${version}
+language: tr_TR
+debug: false
 
-settings:
-  # Teleport countdown in seconds
-  countdown-seconds: 5
-  # How long a request stays valid (seconds)
-  request-expire-seconds: 60
-  # Cancel teleport if the player moves during countdown
-  cancel-on-move: true
+# TPA isteğinin geçerlilik süresi (saniye)
+delay:
+  accept: 30
+  enable_teleport: true
+  enable_command: true
 
-messages:
-  prefix: "&8[&bBXTpa&8] "
-  no-permission: "%prefix%&cBunun icin yetkin yok!"
-  player-not-found: "%prefix%&cOyuncu bulunamadi!"
-  cannot-tpa-self: "%prefix%&cKendine istek gonderemezsin!"
-  request-sent: "%prefix%&aIstek gonderildi: &f%player%"
-  request-received-tpa: "%prefix%&b%player% &fsana teleport olmak istiyor!"
-  request-received-tphere: "%prefix%&b%player% &fseni yanına cagiriyor!"
-  accept-button: "&a&l[KABUL ET]"
-  deny-button: "&c&l[REDDET]"
-  accept-hover: "&aKabul etmek icin tikla"
-  deny-hover: "&cReddetmek icin tikla"
-  request-accepted: "%prefix%&aIstek kabul edildi!"
-  request-denied: "%prefix%&cIstek reddedildi!"
-  no-pending-request: "%prefix%&cBekleyen bir istegin yok!"
-  request-expired: "%prefix%&cIstegin suresi doldu!"
-  countdown: "&e&l%seconds% SANIYE SONRA ISINLANACAKSIN"
-  countdown-warning: "&c&lLUTFEN HAREKET ETME!"
-  teleport-cancelled-move: "%prefix%&cHareket ettigin icin teleport iptal edildi!"
-  teleported: "%prefix%&aTeleport basarili!"
+  # Işınlanma öncesi bekleme süreleri (saniye)
+  default:
+    teleport: 5
+    command: 30
+  vip:
+    teleport: 5
+    command: 25
+  vip+:
+    teleport: 5
+    command: 20
+  mvp:
+    teleport: 5
+    command: 15
+  mvp+:
+    teleport: 5
+    command: 10
+  mvp++:
+    teleport: 5
+    command: 5
+  admin:
+    teleport: 5
+    command: 0
+
+# TPA komutları
+tpa:
+  enable: true
+  permission: false
+
+tphere:
+  enable: true
+  permission: false
+
+# Görsel ve ses ayarları
+enable_title_message: true
+enable_sound: true
+
+sound:
+  countdown:
+    name: ENTITY_EXPERIENCE_ORB_PICKUP
+    volume: 1.0
+    pitch: 1.0
+  success:
+    name: ENTITY_ENDERMAN_TELEPORT
+    volume: 1.0
+    pitch: 1.0
+  fail:
+    name: ENTITY_VILLAGER_NO
+    volume: 1.0
+    pitch: 1.0
+  cancel:
+    name: BLOCK_NOTE_BLOCK_BASS
+    volume: 1.0
+    pitch: 1.0
+
+# TPA ücret sistemi. Kapalı bırakılırsa tüm TPA işlemleri ücretsizdir.
+cost:
+  enable: false
+  currency: money
+  price:
+    tpa: 0
+    tphere: 0
+  discount_mode: percent
+  vip_discount:
+    vip: 50
+    vip+: 30
+    mvp: 20
+    mvp+: 10
+    mvp++: 5
+
+# Geyser/Floodgate varsa TPA istekleri için butonlu pencere kullanılabilir.
+bedrock:
+  teleport_request_form: true
+
+# Güncelleme kontrolü BXTpa'da kapalıdır.
+update_check: false
+use_database: false
+database_type: sqlite
+database_address: localhost
+database_port: 3306
+database_name: bxtpa
+database_username: root
+database_password: ""
+force_spawn: false
