@@ -1,0 +1,227 @@
+## TPA 插件简体中文语言文件
+
+#=======================
+# Temel yapılandırma
+#=======================
+prefix: "<green><bold>></bold></green> "
+console_prefix: "<gray><bold>[BXTpa]</bold></gray> "
+not_online_players: "Çevrimiçi oyuncu yok"
+not_warps: "Mevcut ışınlanma noktası yok"
+not_homes: "Mevcut ev bulunamadı"
+spawn_name: "Spawn"
+rtp_name: "Rastgele ışınlanma"
+last_location: "Son konum"
+lang.set_success: "<green><bold>İstemci dili </bold><gold><bold>%target% </bold><green><bold>olarak ayarlandı</bold></green></gold></green>"
+
+#=======================
+# Buton etkileşimi
+#=======================
+## Buton metinleri
+accept_button: "<dark_gray>   </dark_gray><click:run_command:/tpaccept><hover:show_text:'<green><bold>✔ Işınlanma isteğini kabul et</bold></green><gray>\nTıklayarak hemen kabul edebilirsin.</gray>'><green><bold>[  KABUL ET  ]</bold></green></hover></click>"
+deny_button: "<dark_gray>  </dark_gray><click:run_command:/tpdeny><hover:show_text:'<red><bold>✖ Işınlanma isteğini reddet</bold></red><gray>\nTıklayarak isteği reddedebilirsin.</gray>'><red><bold>[  REDDET  ]</bold></red></hover></click>"
+blacklist.add_button: "<bold><red><click:run_command:/denys add %target%><insert:/denys add %target%><hover:show_text:'<red><bold>Kara listeye ekle</bold></red>'>[Kara Listeye Ekle]</hover></insert></click></red>  </bold>"
+blacklist.remove_button: "<bold><green><click:run_command:/denys remove %target%><insert:/denys remove %target%><hover:show_text:'<green><bold>Kara listeden çıkar</bold></green>'>[Listeden Çıkar]</hover></insert></click></green>  </bold>"
+teleport_button: "<bold><green><click:run_command:/%command% %target%><insert:/%command% %target%><hover:show_text:'<green><bold>Hemen ışınlan</bold></green>'>[Işınlan]</hover></insert></click></green>  </bold>"
+location_set_button: "<bold><gold><click:run_command:/set%command% %target%><insert:/set%command% %target%><hover:show_text:'<gold><bold>Mevcut konumu ayarla</bold></gold>'>[Konum Belirle]</hover></insert></click></gold>  </bold>"
+default_home_set_button: "<bold><yellow><click:run_command:/setdefaulthome %target%><insert:/setdefaulthome %target%><hover:show_text:'<yellow><bold>Varsayılan ev yap</bold></yellow>'>[Varsayılan Ev]</hover></insert></click></yellow>  </bold>"
+delete_button: "<bold><red><click:run_command:/del%command% %target%><insert:/del%command% %target%><hover:show_text:'<red><bold>Kalıcı olarak sil</bold></red>'>[Sil]</hover></insert></click></red>  </bold>"
+
+#=======================
+# Işınlanma istekleri
+#=======================
+request.title: "<bold><green>Işınlanma İsteği</green></bold>"
+request.to_here: "<dark_gray>╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮</dark_gray>\n<gold><bold>        ✦ IŞINLANMA İSTEĞİ ✦</bold></gold>\n<gray>  <yellow>%target%</yellow> <white>sana ışınlanmak istiyor.</white></gray>\n<dark_gray>  ├ </dark_gray><gray>İstek süresi:</gray> <yellow><bold>%seconds% saniye</bold></yellow>\n<dark_gray>╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯</dark_gray>"
+request.to_target: "<dark_gray>╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮</dark_gray>\n<gold><bold>        ✦ IŞINLANMA İSTEĞİ ✦</bold></gold>\n<gray>  <yellow>%target%</yellow> <white>seni yanına ışınlanmaya davet ediyor.</white></gray>\n<dark_gray>  ├ </dark_gray><gray>İstek süresi:</gray> <yellow><bold>%seconds% saniye</bold></yellow>\n<dark_gray>╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯</dark_gray>"
+request.sent_success: "<green><bold></bold><gold><bold>%target% </bold><green><bold>'adlı oyuncuya talep gönderildi</bold></green></gold></green>"
+request.timeout_notice: "<green><bold>Talep </bold><gold><bold>%seconds%s</bold><green><bold> içinde geçerli</bold></green></gold></green>"
+request.expired_from: "<red><bold></bold><gold><bold>%target% </bold><red><bold>'den gelen talep süresi doldu</bold></red></gold></red>"
+request.expired_to: "<red><bold></bold><gold><bold>%target% </bold><red><bold>'e gönderdiğin talep süresi doldu</bold></red></gold></red>"
+
+#=======================
+# Ev sistemi
+#=======================
+home.list_header: "<green><bold>Mevcut Evler:</bold></green>"
+home.set_success: "<green><bold></bold><gold><bold>%target% </bold><green><bold>evi oluşturuldu</bold></green></gold></green>"
+home.default_tag: "[Varsayılan]"
+home.default_set_success: "<green><bold>Varsayılan ev </bold><gold><bold>%target% </bold><green><bold>olarak ayarlandı</bold></green></gold></green>"
+home.delete_success: "<green><bold></bold><gold><bold>%target% </bold><green><bold>evi silindi</bold></green></gold></green>"
+home.teleport_success: "<green><bold></bold><gold><bold>%target% </bold><green><bold>evine ışınlandın</bold></green></gold></green>"
+home.max_limit_error: "<red><bold>Maksimum </bold><gold><bold>%max_home_amount% </bold><red><bold>ev sınırı</bold></red></gold></red>"
+error.default_home_already_set: "<gold><bold>%target% </bold><red><bold>zaten varsayılan ev</bold></red></gold>"
+
+#=======================
+# Işınlanma noktaları
+#=======================
+warp.list_header: "<green><bold>Mevcut Warpler:</bold></green>"
+warp.set_success: "<green><bold></bold><gold><bold>%target% </bold><green><bold>warp noktası oluşturuldu</bold></green></gold></green>"
+warp.delete_success: "<green><bold></bold><gold><bold>%target% </bold><green><bold>warp noktası silindi</bold></green></gold></green>"
+warp.teleport_success: "<green><bold></bold><gold><bold>%target% </bold><green><bold>warp noktasına ışınlandın</bold></green></gold></green>"
+
+#=======================
+# Spawn
+#=======================
+spawn.set_success: "<green><bold>Spawn noktası ayarlandı</bold></green>"
+spawn.delete_success: "<green><bold>Spawn noktası kaldırıldı</bold></green>"
+spawn.teleport_success: "<green><bold>Spawn noktasına ışınlandın!</bold></green>"
+
+#=======================
+# Son konum
+#=======================
+back.teleport_success: "<green><bold>Son konuma dönüldü!</bold></green>"
+
+#=======================
+# Rastgele ışınlanma
+#=======================
+rtp.generating: "<green><bold>Rastgele konum oluşturuluyor...</bold></green>"
+rtp.success: "<green><bold>Rastgele ışınlanma başarılı!</bold></green>"
+rtp.failed: "<red><bold>Rastgele ışınlanma başarısız!</bold></red>"
+
+#=======================
+# Kara liste
+#=======================
+blacklist.list_header: "<green><bold>Kara Listeniz:</bold></green>"
+blacklist.add_success: "<green><bold></bold><gold><bold>%target% </bold><green><bold>kara listeye eklendi</bold></green></gold></green>"
+blacklist.remove_success: "<green><bold></bold><gold><bold>%target% </bold><green><bold>kara listeden çıkarıldı</bold></green></gold></green>"
+
+#=======================
+# Hata mesajları
+#=======================
+## Komut durumu
+error.command_disabled: "<red><bold>Bu komut devre dışı</bold></red>"
+error.world_disabled: "<red><bold>Bu dünyada kullanılamaz</bold></red>"
+error.command_cooldown: "<red><bold>Tekrar denemeden önce </bold><gold><bold>%seconds%s</bold><red><bold> bekle</bold></red></gold></red>"
+
+## Yetki ve kullanım
+error.console_restricted: "<red><bold>Sadece oyuncular kullanabilir</bold></red>"
+error.permission_denied: "<red><bold>Yetkiniz yok!</bold></red>"
+
+## 玩Ev sistemi状态
+error.no_online_players: "<red><bold>Çevrimiçi oyuncu yok</bold></red>"
+error.target_offline: "<red><bold></bold><gold><bold>%target% </bold><red><bold>çevrimdışı</bold></red></gold></red>"
+error.self_operation: "<red><bold>Kendine uygulanamaz</bold></red>"
+
+## İstek durumu
+error.no_pending_request: "<red><bold>Bekleyen talep yok</bold></red>"
+error.request_pending: "<red><bold>İşlenmekte olan talep var</bold></red>"
+
+## Kara liste
+error.already_blacklisted: "<red><bold>Zaten kara listede</bold></red>"
+error.blocked_by_target: "<red><bold>Engellendiniz</bold></red>"
+error.blacklist_empty: "<red><bold>Kara liste boş</bold></red>"
+error.not_blacklisted: "<red><bold>Kara listede değil</bold></red>"
+
+## Ev sistemi
+error.home_not_found: "<red><bold></bold><gold><bold>%target% </bold><red><bold>evi bulunamadı</bold></red></gold></red>"
+error.no_homes_set: "<red><bold>Ayarlı ev yok</bold></red>"
+error.no_default_home: "<red><bold>Varsayılan ev ayarlanmamış</bold></red>"
+
+## Işınlanma noktaları
+error.warp_not_found: "<red><bold></bold><gold><bold>%target% </bold><red><bold>warp noktası yok</bold></red></gold></red>"
+error.no_warps_set: "<red><bold>Mevcut warp yok</bold></red>"
+
+## Konum kayıtları
+error.last_location_missing: "<red><bold>Son konum kaydı yok</bold></red>"
+error.logout_location_missing: "<red><bold>Çıkış konumu kaydedilmemiş</bold></red>"
+error.spawn_not_set: "<red><bold>Spawn noktası ayarlanmamış</bold></red>"
+
+## Yetersiz bakiye
+error.cost_insufficient: "<bold><red>Yetersiz bakiye! Bu ışınlanma</red> <gold>{cost}</gold> {currency}<red> tutuyor, bakiyeniz</red> <gold>{balance}</gold></bold>"
+error.cost_teleport_blocked: "<bold><red><gold>%target%</gold> adlı oyuncunun bakiyesi yetersiz olduğu için ışınlanma iptal edildi</red></bold>"
+
+## Komut kullanımı
+error.syntax_generic: "<red><bold>Sözdizimi hatası! Doğru kullanım: /%command%</bold></red>"
+error.syntax_tpa: "<red><bold>Sözdizimi hatası! Doğru kullanım: /%command% <oyuncu></bold></red>"
+error.syntax_tpall: "<red><bold>Sözdizimi hatası! Doğru kullanım: /%command% [player/warp/spawn] [isim]</bold></red>"
+error.syntax_warp: "<red><bold>Sözdizimi hatası! Doğru kullanım: /%command% <warp></bold></red>"
+error.syntax_home: "<red><bold>Sözdizimi hatası! Doğru kullanım: /%command% <ev></bold></red>"
+
+## Sistem hataları
+error.config_not_found: "<red><bold>Yapılandırma dosyası yeniden oluşturuldu</bold></red>"
+error.runtime: "<red><bold>Eklenti hatası: %message%</bold></red>"
+error.forwarded_error: "<red><bold></bold><gold><bold>%target%</bold><red><bold>'den hata:</bold></red></gold></red>"
+
+#=======================
+# Işınlanma süreci mesajları
+#=======================
+teleport.accept.self: "<green><bold></bold><gold><bold>%target% </bold><green><bold>'ın talebi kabul edildi</bold></green></gold></green>"
+teleport.accept.target: "<green><bold></bold><gold><bold>%target% </bold><green><bold>talebinizi kabul etti</bold></green></gold></green>"
+teleport.deny.self: "<red><bold></bold><gold><bold>%target% </bold><red><bold>'ın talebi reddedildi</bold></red></gold></red>"
+teleport.deny.target: "<red><bold></bold><gold><bold>%target% </bold><red><bold>talebinizi reddetti</bold></red></gold></red>"
+teleport.countdown: "<dark_gray>▰ <yellow><bold>%seconds% SANİYE İÇİNDE IŞINLANIYORSUN</bold></yellow> <dark_gray>▰"
+teleport.cancel_on_move: "<red><bold>⚠ LÜTFEN HAREKET ETME! ⚠</bold></red>"
+teleport.canceled.self: "<dark_red><bold>✖ IŞINLANMA İPTAL EDİLDİ!</bold></dark_red>"
+teleport.canceled.target: "<red><bold>✖ KARŞI TARAF HAREKET ETTİ VE IŞINLANMA İPTAL OLDU!</bold></red>"
+teleport.generic_success: "<green><bold></bold><gold><bold>%target% </bold><green><bold>'adlı yere ışınlandın</bold></green></gold></green>"
+teleport.tpall.to_target: "<green><bold>Yönetici seni </bold><gold><bold>%target% </bold><green><bold>'adlı yere ışınladı</bold></green></gold></green>"
+teleport.tpall.to_self: "<green><bold>Yönetici herkesi sana getirdi</bold></green>"
+teleport.tpall.success: "<green><bold>Tüm oyuncular </bold><gold><bold>%target% </bold><green><bold>'adlı yere ışınlandı</bold></green></gold></green>"
+teleport.logout_location: "<green><bold></bold><gold><bold>%target% </bold><green><bold>'ın son çıkış konumuna ışınlandın</bold></green></gold></green>"
+teleport.cost_charged: "<bold><green>Bu ışınlanma</green> <gold>{cost}</gold> {currency}<green> harcadı, bakiyeniz</green> <gold>{balance}</gold></bold>"
+
+#=======================
+# Sistem mesajları
+#=======================
+system.config_reloaded: "<green><bold>Yapılandırma yeniden yüklendi!</bold></green>"
+system.currency_money: "<bold><gold>para</gold></bold>"
+system.currency_points: "<bold><green>puan</green></bold>"
+system.plugin_loaded: "<green><bold>Eklenti yüklendi! Sürüm: </bold><gold><bold>%target%</bold></gold></green>"
+system.plugin_unloaded: "<red><bold>Eklenti kaldırıldı!</bold></red>"
+system.config_migrated_success: "<green><bold>Yapılandırma taşıması tamamlandı!</bold></green>"
+system.config_migrated: "<green><bold>Eski yapılandırma taşınıyor (otomatik yedekleme aktif)</bold></green>"
+system.debug_warning: "<red><bold>Debug modu aktif - kullanım sonrası kapatın!</bold></red>"
+
+## Konsol günlükleri
+system.log.language_missing_key: "Dil dosyası {0} içinde {1} anahtarı eksik (muhtemelen eski sürüme ait bir dosya; plugins/TPA/language klasörünü silip sunucuyu yeniden başlatarak dosyayı yeniden oluşturabilir veya bu anahtarı elle ekleyebilirsiniz)"
+system.log.config_migrated_detail: "Eski yapılandırma geçirildi ({0} → {1}): kullanıcı tanımlı değerler korundu, eski dil dosyası plugins/TPA/backup/{0}/ yoluna yedeklendi ve yeni sürüm dil dosyası yeniden oluşturuldu"
+## Veritabanı
+system.log.database_disabled: "Veritabanı depolama etkin değil (use_database: false), oyuncu verileri playerdata klasörüne kaydedilecek"
+system.log.database_pool_initialized: "Veritabanı bağlantı havuzu başlatıldı ({0})"
+system.log.database_connect_failed: "Veritabanı bağlantısı başarısız oldu ({0}): {1}"
+system.log.database_fallback_sqlite: "Yerel SQLite depolamasına geçildi ({0}), veriler geçici olarak yerelde tutuluyor; yapılandırma düzeltildikten sonra /tpac reload çalıştırıldığında veriler otomatik olarak veritabanına geri taşınacak"
+system.log.database_fallback_create_failed: "Yedek SQLite bağlantı havuzu oluşturulamadı: {0}"
+system.log.database_memory_only: "Veritabanı kullanılamıyor ve yedek moda geçiş başarısız; veriler yalnızca bellek önbelleğinde tutulacak (yeniden başlatmada kaybolur)"
+system.log.database_get_connection_failed: "Veritabanı bağlantısı alınamadı: {0}"
+system.log.database_pool_closed: "Veritabanı bağlantı havuzu kapatıldı"
+system.log.database_table_created: "{0} tablosu oluşturuldu"
+system.log.database_table_exists: "{0} tablosu zaten mevcut"
+system.log.database_table_points_created: "tpa_points tablosu oluşturuldu (spawn/warp için birleşik teleport noktası deposu)"
+system.log.database_column_added: "player_data tablosuna {0} sütunu eklendi"
+system.log.database_column_add_failed: "player_data tablosuna {0} sütunu eklenemedi: {1}"
+system.log.unsupported_database_type: "Desteklenmeyen veritabanı türü: {0}"
+## Ekonomi bağlantısı
+system.log.vault_hooked: "Vault ekonomi sistemiyle bağlantı kuruldu (para ücreti kullanılabilir)"
+system.log.playerpoints_hooked: "PlayerPoints puan sistemiyle bağlantı kuruldu (puan ücreti kullanılabilir)"
+system.log.cost_without_currency: "Teleport ücreti etkin (cost.enable: true) ancak para birimi sistemi ({0}) kullanılamıyor: {1} yüklü değil veya ekonomi/puan hizmeti sunmuyor, ücret alınmayacak"
+## Depolama aktarımı
+system.log.backup_failed: "{0} yedeklenemedi: {1}"
+system.log.fallback_migrate_players_failed: "Yedek veritabanındaki oyuncu verilerinin taşınması başarısız oldu (player_data tablosu olmayabilir): {0}"
+system.log.fallback_migrate_points_failed: "Yedek veritabanındaki teleport noktası verilerinin taşınması başarısız oldu (tpa_points tablosu olmayabilir): {0}"
+system.log.fallback_migrated_back: "Yedek veritabanındaki veriler veritabanına geri taşındı: {0} oyuncu kaydı, {1} teleport noktası kaydı"
+system.log.fallback_backup_removed: "Yedek veritabanı {0} konumuna yedeklendi ve kaldırıldı"
+system.log.fallback_migrate_back_failed: "Yedek veritabanındaki verilerin veritabanına geri taşınması başarısız oldu: {0}"
+system.log.spawn_migrated_to_db: "spawn verileri veritabanına taşındı (tpa_points)"
+system.log.spawn_yml_backed_up: "Eski spawn.yml dosyası backup/{0} konumuna yedeklendi"
+system.log.warp_migrated_to_db: "{0} warp verisi veritabanına taşındı (tpa_points)"
+system.log.warp_yml_backed_up: "Eski warp.yml dosyası backup/{0} konumuna yedeklendi"
+system.log.players_migrated_to_db: "{0} oyuncunun yml verileri veritabanına taşındı (orijinal dosyalar playerdata klasöründe korundu)"
+system.log.db_file_backed_up: "Özgün veritabanı dosyası backup/{0} konumuna yedeklendi"
+system.log.points_migrated_to_yml: "Veritabanındaki teleport noktası verileri yml dosyalarına (spawn.yml/warp.yml) geri taşındı: {0} kayıt"
+## Bedrock pencere bağlantısı
+system.log.floodgate_missing: "Floodgate eklentisi algılanmadı, Bedrock oyuncuları sohbet etkileşimini kullanacak"
+system.log.floodgate_hook_failed: "Floodgate bağlantısı kurulamadı, Bedrock oyuncuları sohbet etkileşimini kullanacak: {0}: {1}"
+system.log.floodgate_hooked: "Floodgate bağlantısı kuruldu (Bedrock oyuncularında tıklanabilir mesajlar form düğmeleri olarak gösterilecek)"
+system.log.bedrock_check_failed: "Bedrock oyuncusu kontrolü sırasında hata oluştu (Bedrock dışı olarak işlendi): {0}: {1}"
+system.log.bedrock_identified_debug: "[debug] Bedrock oyuncusu tanımlandı: {0}"
+system.log.form_send_false: "Form gönderimi false döndürdü (hedef {0} çevrimdışı veya Bedrock oyuncusu olmayabilir)"
+system.log.form_send_failed: "Form gönderiminde istisna oluştu: {0}: {1}"
+## Hata koruması
+system.log.command_exception_caught: "Komut işlenirken istisna oluştu (güvenli biçimde yakalandı): {0}: {1}"
+system.log.event_exception_caught: "{0} olayı işlenirken istisna oluştu (güvenli biçimde yakalandı): {1}: {2}"
+
+#=======================
+# Güncelleme
+#=======================
+update.checking: "<green><bold>Güncellemeler kontrol ediliyor...</bold></green>"
+update.available: "<green><bold>Yeni sürüm </bold><gold><bold>BXTpa-v%target%</bold><green><bold> mevcut: </bold></green></gold></green>"
+update.latest: "<green><bold>En son sürüm kullanılıyor</bold></green>"
+update.failed: "<red><bold>Güncelleme kontrolü başarısız</bold></red>"
